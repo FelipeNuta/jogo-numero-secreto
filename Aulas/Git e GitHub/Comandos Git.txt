@@ -1,0 +1,10 @@
+*************************************
+*************Comando GIT*************
+*************************************
+
+git status: Mostra o estado dos arquivos no repositório.
+git add: Prepara arquivos para o próximo commit.
+git push: Envia commits locais para o repositório remoto.
+git pull: Atualiza o repositório local com mudanças do repositório remoto.
+
+
