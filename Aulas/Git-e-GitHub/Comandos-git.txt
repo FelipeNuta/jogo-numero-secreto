@@ -47,3 +47,17 @@ Informações do commit, como o autor, data e mensagem de commit.
 Conteúdo de arquivos modificados por esse commit.
 Substitua {hash do commit} pelo hash específico do commit que você deseja inspecionar.
 
+git diff é usado para mostrar as diferenças entre versões de arquivos em um repositório Git. Ele pode comparar:
+Alterações não comitadas em relação ao último commit.
+Diferentes commits.
+Branches diferentes.
+Essencialmente, ele exibe as linhas que foram adicionadas ou removidas, permitindo ver as mudanças de forma detalhada. 
+É uma ferramenta útil para revisar e entender alterações antes de fazer um commit ou para comparar o estado atual do código com o de commits anteriores.
+
+git diff hash1..hash2 compara as diferenças entre dois commits específicos identificados pelos seus hashes. 
+Ele mostra as alterações entre o estado do repositório nos commits hash1 e hash2.
+Em resumo, esse comando exibe as modificações feitas entre os dois commits, permitindo analisar o que mudou entre eles. 
+Se você quiser ver a diferença entre dois pontos específicos na história do repositório, esse comando é a ferramenta ideal.
+
+
+
