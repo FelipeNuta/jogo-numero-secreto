@@ -1,0 +1,49 @@
+*************************************
+*************Comando GIT*************
+*************************************
+
+git status: Mostra o estado dos arquivos no repositório.
+git add: Prepara arquivos para o próximo commit.
+git push: Envia commits locais para o repositório remoto.
+git pull: Atualiza o repositório local com mudanças do repositório remoto.
+git reset --hard id do comite anterior: exclui alterações no índice e no diretório de trabalho. 
+git commit --amend id do comite: permite modificar o último commit, alterando sua mensagem e/ou incluindo alterações adicionais.
+
+
+Mais comandos git em:
+https://git-scm.com/docs/git-reset/pt_BR
+
+https://www.toptal.com/developers/gitignore/
+Gera ja o GitIgnore serve para evitar que arquivos indesejados sejam enviados para o GitHub.
+
+GitHub Gist
+Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
+URL: https://gist.github.com
+
+git log --oneline: Exibe o histórico de commits de forma compacta,
+mostrando um resumo de cada commit em uma linha, 
+incluindo o hash abreviado e a mensagem de commit.
+
+git log -p: Mostra o histórico de commits junto com as diferenças (diffs) introduzidas em cada commit, 
+detalhando as alterações realizadas em arquivos.
+
+git log --graph: Exibe o histórico de commits como um gráfico ASCII, 
+visualizando a árvore de commits e seus relacionamentos, 
+facilitando a visualização de merges e branches.
+
+git log --pretty: Permite personalizar o formato da saída dos logs. 
+Pode ser combinado com diferentes formatos para ajustar a aparência das informações exibidas (ex: --pretty=short, --pretty=full).
+
+git log --format="%H %an": Exibe o histórico de commits usando um formato personalizado, 
+onde %H é o hash completo do commit e %an é o nome do autor. 
+Personalize o formato com vários placeholders.
+
+git log --help: Mostra a página de ajuda para o comando git log, 
+fornecendo infor mações detalhadas sobre opções e uso do comando.
+
+git show {hash do commit} exibe detalhes sobre um commit específico, incluindo:
+Mudanças feitas no commit (diffs).
+Informações do commit, como o autor, data e mensagem de commit.
+Conteúdo de arquivos modificados por esse commit.
+Substitua {hash do commit} pelo hash específico do commit que você deseja inspecionar.
+
