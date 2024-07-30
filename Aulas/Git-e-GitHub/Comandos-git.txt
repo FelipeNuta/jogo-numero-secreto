@@ -98,26 +98,32 @@ Sintaxe: git diff <hash1>..<hash2>
 git branch: Cria uma nova branch (ramo) com o nome especificado. Este comando não altera a branch atual, apenas cria a nova.
 Sintaxe: git branch <nome-da-nova-branch>
 
+
 git branch -d: Deleta a branch especificada. 
 O -d (ou --delete) só permite a exclusão se a branch já tiver sido mesclada (merged) com outra branch. 
 Para forçar a exclusão de uma branch que não foi mesclada, use -D (ou --delete --force).
 Sintaxe: git branch -d <nome-da-branch>
 
+
 git checkout: Altera a branch atual para a branch especificada. 
 Você começa a trabalhar na branch indicada, mudando o estado do repositório para corresponder a essa branch.
 Sintaxe: git checkout <nome-da-branch>
+
 
 git checkout -b: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
 É uma combinação dos comandos git branch e git checkout.
 Sintaxe: git checkout -b <nome-da-nova-branch>
 
+
 git switch: Altera a branch atual para a branch especificada, similar ao git checkout <nome-da-branch>, 
 mas é uma forma mais moderna e intuitiva introduzida no Git para lidar especificamente com a troca de branches.
 Sintaxe: git switch <nome-da-branch>
 
+
 git switch -c: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
 É equivalente ao git checkout -b <nome-da-nova-branch>, mas usando a sintaxe mais moderna do comando git switch.
 Sintaxe: git switch -c <nome-da-nova-branch>
+
 
 git merge: O comando git merge é usado para unir as alterações de uma branch (ramificação) específica com a branch atual. 
 Quando você executa git merge, o Git integra as mudanças de <branch> no branch onde você está atualmente posicionado. 
@@ -125,10 +131,41 @@ Se não houver conflitos, o Git cria um commit de merge que combina as mudanças
 Se houver conflitos, você precisará resolvê-los manualmente antes de completar o merge.
 Sintaxe: git merge <branch>
 
+
 git rebase nome-da-branch: é utilizado para aplicar os commits de uma branch atual sobre outra branch base. 
 Quando você executa git rebase nome-da-branch, o Git move a base da branch atual para o topo da branch , reaplicando os commits da branch atual. 
 Isso é útil para manter um histórico de commits mais limpo e linear, especialmente antes de fazer um merge com a branch principal.
 Sintaxe: git rebase <branch>
+
+
+git stash: Salva as mudanças atuais no diretório de trabalho e no índice (stage) para que você possa trabalhar em outra tarefa sem comprometer essas alterações. 
+Ele cria um stash que pode ser recuperado mais tarde.
+Sintaxe: git stash
+
+
+git stash pop: Aplica as mudanças salvas no stash mais recente ao diretório de trabalho e remove o stash aplicado da lista de stashes. 
+É útil para reverter rapidamente para um estado de trabalho anterior.
+Sintaxe: git stash pop
+
+
+git stash list: Exibe uma lista de todas as entradas no stash, mostrando os stashes disponíveis e suas descrições. 
+Cada stash é identificado por um índice, que pode ser usado para aplicar ou remover o stash.
+Sintaxe: git stash list
+
+
+git stash clear: Remove todos os stashes armazenados. 
+Use este comando para limpar completamente o stash, liberando espaço e removendo todas as entradas salvas.
+Sintaxe: git stash clear
+
+
+git stash push -m <mensagem>: Salva as alterações atuais no stash e adiciona uma mensagem descritiva para facilitar a identificação do stash mais tarde. 
+Isso é útil para adicionar contexto às alterações armazenadas.
+Sintaxe: git stash push -m <mensagem>
+
+
+git stash apply <índice>: Aplica um stash específico, identificado pelo índice fornecido, ao diretório de trabalho. 
+O stash aplicado permanece na lista de stashes, permitindo que você possa aplicá-lo novamente mais tarde, se necessário.
+Sintaxe: git stash apply <índice>
 
 
 *************************************************************************************************************************************
@@ -149,6 +186,5 @@ https://www.toptal.com/developers/gitignore/
 GitHub Gist
 Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
 URL: https://gist.github.com
-
 
 
