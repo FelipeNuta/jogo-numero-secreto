@@ -21,6 +21,12 @@ git add: Prepara arquivos para o próximo commit.
 git push: Envia commits locais para o repositório remoto.
 Sintaxe: git push <nome-do-diretorio-remoto> <branch>
 
+git push com ":" : Este comando é usado para deletar uma branch remota. 
+Ao usar o git push com uma sintaxe onde o nome da branch local está vazio (ou seja, precedido por um :),
+você está informando ao Git para remover a branch especificada no repositório remoto. 
+É útil quando você deseja limpar branches antigas ou desnecessárias no repositório remoto.
+Sintaxe: git push <nome-do-diretorio-remoto> :<branch>
+
 git pull: Atualiza o repositório local com mudanças do repositório remoto.
 Sintaxe: git pull <nome-do-diretorio-remoto> <branch>
 
@@ -113,6 +119,17 @@ git switch -c: Cria uma nova branch com o nome especificado e muda para essa nov
 É equivalente ao git checkout -b <nome-da-nova-branch>, mas usando a sintaxe mais moderna do comando git switch.
 Sintaxe: git switch -c <nome-da-nova-branch>
 
+git merge: O comando git merge é usado para unir as alterações de uma branch (ramificação) específica com a branch atual. 
+Quando você executa git merge, o Git integra as mudanças de <branch> no branch onde você está atualmente posicionado. 
+Se não houver conflitos, o Git cria um commit de merge que combina as mudanças de ambas as branches. 
+Se houver conflitos, você precisará resolvê-los manualmente antes de completar o merge.
+Sintaxe: git merge <branch>
+
+git rebase nome-da-branch: é utilizado para aplicar os commits de uma branch atual sobre outra branch base. 
+Quando você executa git rebase nome-da-branch, o Git move a base da branch atual para o topo da branch , reaplicando os commits da branch atual. 
+Isso é útil para manter um histórico de commits mais limpo e linear, especialmente antes de fazer um merge com a branch principal.
+Sintaxe: git rebase <branch>
+
 
 *************************************************************************************************************************************
 *************************************************************************************************************************************
@@ -132,3 +149,6 @@ https://www.toptal.com/developers/gitignore/
 GitHub Gist
 Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
 URL: https://gist.github.com
+
+
+
