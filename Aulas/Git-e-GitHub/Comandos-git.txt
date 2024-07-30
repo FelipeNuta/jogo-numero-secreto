@@ -167,6 +167,11 @@ git stash apply <índice>: Aplica um stash específico, identificado pelo índic
 O stash aplicado permanece na lista de stashes, permitindo que você possa aplicá-lo novamente mais tarde, se necessário.
 Sintaxe: git stash apply <índice>
 
+git stash drop: remove um item específico da lista de stashes. 
+Ele funciona de maneira semelhante ao git stash pop, mas com uma diferença: 
+enquanto git stash pop aplica o stash ao diretório de trabalho e o remove, git stash drop apenas remove o stash da lista sem aplicá-lo. 
+Por exemplo, git stash drop remove o último item adicionado ao stash, enquanto git stash drop 1 remove o item com índice 1.
+Sintaxe: git stash drop <índice>
 
 *************************************************************************************************************************************
 *************************************************************************************************************************************
