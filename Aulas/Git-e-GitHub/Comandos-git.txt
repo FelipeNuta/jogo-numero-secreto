@@ -1,24 +1,43 @@
-*************************************
-*************Comando GIT*************
-*************************************
+#######################################
+#####       Titulo:      ##        ####
+#####       Sintaxe:     ##        ####     
+#####      Comandos:     ##        ####       
+#####    Documentação:   ##        ####       
+#######################################  
+    
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+****                                                                                                                             ****
+****                                                        COMANDOS GIT                                                         ****             
+****                                                                                                                             ****
+*************************************************************************************************************************************
+*************************************************************************************************************************************
 
 git status: Mostra o estado dos arquivos no repositório.
+
 git add: Prepara arquivos para o próximo commit.
+
 git push: Envia commits locais para o repositório remoto.
+Sintaxe: git push <nome-do-diretorio-remoto> <branch>
+
 git pull: Atualiza o repositório local com mudanças do repositório remoto.
-git reset --hard id do comite anterior: exclui alterações no índice e no diretório de trabalho. 
-git commit --amend id do comite: permite modificar o último commit, alterando sua mensagem e/ou incluindo alterações adicionais.
+Sintaxe: git pull <nome-do-diretorio-remoto> <branch>
+
+git reset --hard: exclui alterações no índice e no diretório de trabalho. 
+Sintaxe: git reset --hard <id do commit>
+
+git commit --amend: permite modificar o último commit, alterando sua mensagem e/ou incluindo alterações adicionais.
+Sintaxe: git commit --amend <id do commit>
 
 
-Mais comandos git em:
-https://git-scm.com/docs/git-reset/pt_BR
-
-https://www.toptal.com/developers/gitignore/
-Gera ja o GitIgnore serve para evitar que arquivos indesejados sejam enviados para o GitHub.
-
-GitHub Gist
-Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
-URL: https://gist.github.com
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+****                                                                                                                             ****
+****                                                        COMANDOS DE LOG                                                      ****             
+****                                                                                                                             ****
+*************************************************************************************************************************************
+*************************************************************************************************************************************
 
 git log --oneline: Exibe o histórico de commits de forma compacta,
 mostrando um resumo de cada commit em uma linha, 
@@ -41,23 +60,75 @@ Personalize o formato com vários placeholders.
 git log --help: Mostra a página de ajuda para o comando git log, 
 fornecendo infor mações detalhadas sobre opções e uso do comando.
 
-git show {hash do commit} exibe detalhes sobre um commit específico, incluindo:
+git show: exibe detalhes sobre um commit específico, incluindo:
 Mudanças feitas no commit (diffs).
 Informações do commit, como o autor, data e mensagem de commit.
 Conteúdo de arquivos modificados por esse commit.
 Substitua {hash do commit} pelo hash específico do commit que você deseja inspecionar.
+Sintaxe: git show <id do commit>
 
-git diff é usado para mostrar as diferenças entre versões de arquivos em um repositório Git. Ele pode comparar:
+git diff: é usado para mostrar as diferenças entre versões de arquivos em um repositório Git. Ele pode comparar:
 Alterações não comitadas em relação ao último commit.
 Diferentes commits.
 Branches diferentes.
 Essencialmente, ele exibe as linhas que foram adicionadas ou removidas, permitindo ver as mudanças de forma detalhada. 
 É uma ferramenta útil para revisar e entender alterações antes de fazer um commit ou para comparar o estado atual do código com o de commits anteriores.
 
-git diff hash1..hash2 compara as diferenças entre dois commits específicos identificados pelos seus hashes. 
+git diff comparando commits: compara as diferenças entre dois commits específicos identificados pelos seus hashes. 
 Ele mostra as alterações entre o estado do repositório nos commits hash1 e hash2.
 Em resumo, esse comando exibe as modificações feitas entre os dois commits, permitindo analisar o que mudou entre eles. 
 Se você quiser ver a diferença entre dois pontos específicos na história do repositório, esse comando é a ferramenta ideal.
+Sintaxe: git diff <hash1>..<hash2>
 
 
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+****                                                                                                                             ****
+**** ESSES COMANDOS SÃO ESSENCIAIS PARA GERENCIAR BRANCHES EM PROJETOS GIT E FACILITAR O FLUXO DE TRABALHO NO CONTROLE DE VERSÃO ****
+****                                                                                                                             ****
+*************************************************************************************************************************************
+*************************************************************************************************************************************
 
+git branch: Cria uma nova branch (ramo) com o nome especificado. Este comando não altera a branch atual, apenas cria a nova.
+Sintaxe: git branch <nome-da-nova-branch>
+
+git branch -d: Deleta a branch especificada. 
+O -d (ou --delete) só permite a exclusão se a branch já tiver sido mesclada (merged) com outra branch. 
+Para forçar a exclusão de uma branch que não foi mesclada, use -D (ou --delete --force).
+Sintaxe: git branch -d <nome-da-branch>
+
+git checkout: Altera a branch atual para a branch especificada. 
+Você começa a trabalhar na branch indicada, mudando o estado do repositório para corresponder a essa branch.
+Sintaxe: git checkout <nome-da-branch>
+
+git checkout -b: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
+É uma combinação dos comandos git branch e git checkout.
+Sintaxe: git checkout -b <nome-da-nova-branch>
+
+git switch: Altera a branch atual para a branch especificada, similar ao git checkout <nome-da-branch>, 
+mas é uma forma mais moderna e intuitiva introduzida no Git para lidar especificamente com a troca de branches.
+Sintaxe: git switch <nome-da-branch>
+
+git switch -c: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
+É equivalente ao git checkout -b <nome-da-nova-branch>, mas usando a sintaxe mais moderna do comando git switch.
+Sintaxe: git switch -c <nome-da-nova-branch>
+
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+****                                                                                                                             ****
+****                                                        Documentações                                                        ****             
+****                                                                                                                             ****
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+
+Mais comandos git em:
+https://git-scm.com/docs/git-reset/pt_BR
+
+Gera ja o GitIgnore serve para evitar que arquivos indesejados sejam enviados para o GitHub:
+https://www.toptal.com/developers/gitignore/
+
+GitHub Gist
+Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
+URL: https://gist.github.com
