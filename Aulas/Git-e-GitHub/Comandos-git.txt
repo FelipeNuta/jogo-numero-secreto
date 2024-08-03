@@ -14,26 +14,33 @@
 *************************************************************************************************************************************
 *************************************************************************************************************************************
 
-git status: Mostra o estado dos arquivos no repositório.
+git status: 
+Mostra o estado dos arquivos no repositório.
 
-git add: Prepara arquivos para o próximo commit.
+git add: 
+Prepara arquivos para o próximo commit.
 
-git push: Envia commits locais para o repositório remoto.
+git push:
+Envia commits locais para o repositório remoto.
 Sintaxe: git push <nome-do-diretorio-remoto> <branch>
 
-git push com ":" : Este comando é usado para deletar uma branch remota. 
+git push com ":" : 
+Este comando é usado para deletar uma branch remota. 
 Ao usar o git push com uma sintaxe onde o nome da branch local está vazio (ou seja, precedido por um :),
 você está informando ao Git para remover a branch especificada no repositório remoto. 
 É útil quando você deseja limpar branches antigas ou desnecessárias no repositório remoto.
 Sintaxe: git push <nome-do-diretorio-remoto> :<branch>
 
-git pull: Atualiza o repositório local com mudanças do repositório remoto.
+git pull: 
+Atualiza o repositório local com mudanças do repositório remoto.
 Sintaxe: git pull <nome-do-diretorio-remoto> <branch>
 
-git reset --hard: exclui alterações no índice e no diretório de trabalho. 
+git reset --hard: 
+exclui alterações no índice e no diretório de trabalho. 
 Sintaxe: git reset --hard <id do commit>
 
-git commit --amend: permite modificar o último commit, alterando sua mensagem e/ou incluindo alterações adicionais.
+git commit --amend: 
+permite modificar o último commit, alterando sua mensagem e/ou incluindo alterações adicionais.
 Sintaxe: git commit --amend <id do commit>
 
 
@@ -45,42 +52,51 @@ Sintaxe: git commit --amend <id do commit>
 *************************************************************************************************************************************
 *************************************************************************************************************************************
 
-git log --oneline: Exibe o histórico de commits de forma compacta,
+git log --oneline: 
+Exibe o histórico de commits de forma compacta,
 mostrando um resumo de cada commit em uma linha, 
 incluindo o hash abreviado e a mensagem de commit.
 
-git log -p: Mostra o histórico de commits junto com as diferenças (diffs) introduzidas em cada commit, 
+git log -p: 
+Mostra o histórico de commits junto com as diferenças (diffs) introduzidas em cada commit, 
 detalhando as alterações realizadas em arquivos.
 
-git log --graph: Exibe o histórico de commits como um gráfico ASCII, 
+git log --graph: 
+Exibe o histórico de commits como um gráfico ASCII, 
 visualizando a árvore de commits e seus relacionamentos, 
 facilitando a visualização de merges e branches.
 
-git log --pretty: Permite personalizar o formato da saída dos logs. 
+git log --pretty: 
+Permite personalizar o formato da saída dos logs. 
 Pode ser combinado com diferentes formatos para ajustar a aparência das informações exibidas (ex: --pretty=short, --pretty=full).
 
-git log --format="%H %an": Exibe o histórico de commits usando um formato personalizado, 
+git log --format="%H %an": 
+Exibe o histórico de commits usando um formato personalizado, 
 onde %H é o hash completo do commit e %an é o nome do autor. 
 Personalize o formato com vários placeholders.
 
-git log --help: Mostra a página de ajuda para o comando git log, 
+git log --help: 
+Mostra a página de ajuda para o comando git log, 
 fornecendo infor mações detalhadas sobre opções e uso do comando.
 
-git show: exibe detalhes sobre um commit específico, incluindo:
+git show: 
+exibe detalhes sobre um commit específico, incluindo:
 Mudanças feitas no commit (diffs).
 Informações do commit, como o autor, data e mensagem de commit.
 Conteúdo de arquivos modificados por esse commit.
 Substitua {hash do commit} pelo hash específico do commit que você deseja inspecionar.
 Sintaxe: git show <id do commit>
 
-git diff: é usado para mostrar as diferenças entre versões de arquivos em um repositório Git. Ele pode comparar:
+git diff:
+é usado para mostrar as diferenças entre versões de arquivos em um repositório Git. Ele pode comparar:
 Alterações não comitadas em relação ao último commit.
 Diferentes commits.
 Branches diferentes.
 Essencialmente, ele exibe as linhas que foram adicionadas ou removidas, permitindo ver as mudanças de forma detalhada. 
 É uma ferramenta útil para revisar e entender alterações antes de fazer um commit ou para comparar o estado atual do código com o de commits anteriores.
 
-git diff comparando commits: compara as diferenças entre dois commits específicos identificados pelos seus hashes. 
+git diff comparando commits: 
+compara as diferenças entre dois commits específicos identificados pelos seus hashes. 
 Ele mostra as alterações entre o estado do repositório nos commits hash1 e hash2.
 Em resumo, esse comando exibe as modificações feitas entre os dois commits, permitindo analisar o que mudou entre eles. 
 Se você quiser ver a diferença entre dois pontos específicos na história do repositório, esse comando é a ferramenta ideal.
@@ -99,75 +115,89 @@ git branch: Cria uma nova branch (ramo) com o nome especificado. Este comando n�
 Sintaxe: git branch <nome-da-nova-branch>
 
 
-git branch -d: Deleta a branch especificada. 
+git branch -d: 
+Deleta a branch especificada. 
 O -d (ou --delete) só permite a exclusão se a branch já tiver sido mesclada (merged) com outra branch. 
 Para forçar a exclusão de uma branch que não foi mesclada, use -D (ou --delete --force).
 Sintaxe: git branch -d <nome-da-branch>
 
 
-git checkout: Altera a branch atual para a branch especificada. 
+git checkout: 
+Altera a branch atual para a branch especificada. 
 Você começa a trabalhar na branch indicada, mudando o estado do repositório para corresponder a essa branch.
 Sintaxe: git checkout <nome-da-branch>
 
 
-git checkout -b: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
+git checkout -b: 
+Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
 É uma combinação dos comandos git branch e git checkout.
 Sintaxe: git checkout -b <nome-da-nova-branch>
 
 
-git switch: Altera a branch atual para a branch especificada, similar ao git checkout <nome-da-branch>, 
+git switch: 
+Altera a branch atual para a branch especificada, similar ao git checkout <nome-da-branch>, 
 mas é uma forma mais moderna e intuitiva introduzida no Git para lidar especificamente com a troca de branches.
 Sintaxe: git switch <nome-da-branch>
 
 
-git switch -c: Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
+git switch -c: 
+Cria uma nova branch com o nome especificado e muda para essa nova branch imediatamente. 
 É equivalente ao git checkout -b <nome-da-nova-branch>, mas usando a sintaxe mais moderna do comando git switch.
 Sintaxe: git switch -c <nome-da-nova-branch>
 
 
-git merge: O comando git merge é usado para unir as alterações de uma branch (ramificação) específica com a branch atual. 
+git merge: 
+O comando git merge é usado para unir as alterações de uma branch (ramificação) específica com a branch atual. 
 Quando você executa git merge, o Git integra as mudanças de <branch> no branch onde você está atualmente posicionado. 
 Se não houver conflitos, o Git cria um commit de merge que combina as mudanças de ambas as branches. 
 Se houver conflitos, você precisará resolvê-los manualmente antes de completar o merge.
 Sintaxe: git merge <branch>
 
 
-git rebase nome-da-branch: é utilizado para aplicar os commits de uma branch atual sobre outra branch base. 
+git rebase nome-da-branch: 
+é utilizado para aplicar os commits de uma branch atual sobre outra branch base. 
 Quando você executa git rebase nome-da-branch, o Git move a base da branch atual para o topo da branch , reaplicando os commits da branch atual. 
 Isso é útil para manter um histórico de commits mais limpo e linear, especialmente antes de fazer um merge com a branch principal.
 Sintaxe: git rebase <branch>
 
 
-git stash: Salva as mudanças atuais no diretório de trabalho e no índice (stage) para que você possa trabalhar em outra tarefa sem comprometer essas alterações. 
+git stash: 
+Salva as mudanças atuais no diretório de trabalho e no índice (stage) para que você possa trabalhar em outra tarefa sem comprometer essas alterações. 
 Ele cria um stash que pode ser recuperado mais tarde.
 Sintaxe: git stash
 
 
-git stash pop: Aplica as mudanças salvas no stash mais recente ao diretório de trabalho e remove o stash aplicado da lista de stashes. 
+git stash pop: 
+Aplica as mudanças salvas no stash mais recente ao diretório de trabalho e remove o stash aplicado da lista de stashes. 
 É útil para reverter rapidamente para um estado de trabalho anterior.
 Sintaxe: git stash pop
 
 
-git stash list: Exibe uma lista de todas as entradas no stash, mostrando os stashes disponíveis e suas descrições. 
+git stash list: 
+Exibe uma lista de todas as entradas no stash, mostrando os stashes disponíveis e suas descrições. 
 Cada stash é identificado por um índice, que pode ser usado para aplicar ou remover o stash.
 Sintaxe: git stash list
 
 
-git stash clear: Remove todos os stashes armazenados. 
+git stash clear: 
+Remove todos os stashes armazenados. 
 Use este comando para limpar completamente o stash, liberando espaço e removendo todas as entradas salvas.
 Sintaxe: git stash clear
 
 
-git stash push -m <mensagem>: Salva as alterações atuais no stash e adiciona uma mensagem descritiva para facilitar a identificação do stash mais tarde. 
+git stash push -m <mensagem>: 
+Salva as alterações atuais no stash e adiciona uma mensagem descritiva para facilitar a identificação do stash mais tarde. 
 Isso é útil para adicionar contexto às alterações armazenadas.
 Sintaxe: git stash push -m <mensagem>
 
 
-git stash apply <índice>: Aplica um stash específico, identificado pelo índice fornecido, ao diretório de trabalho. 
+git stash apply <índice>: 
+Aplica um stash específico, identificado pelo índice fornecido, ao diretório de trabalho. 
 O stash aplicado permanece na lista de stashes, permitindo que você possa aplicá-lo novamente mais tarde, se necessário.
 Sintaxe: git stash apply <índice>
 
-git stash drop: remove um item específico da lista de stashes. 
+git stash drop: 
+remove um item específico da lista de stashes. 
 Ele funciona de maneira semelhante ao git stash pop, mas com uma diferença: 
 enquanto git stash pop aplica o stash ao diretório de trabalho e o remove, git stash drop apenas remove o stash da lista sem aplicá-lo. 
 Por exemplo, git stash drop remove o último item adicionado ao stash, enquanto git stash drop 1 remove o item com índice 1.
@@ -198,7 +228,16 @@ git restore --source=id-do-commit:
 Restaura arquivos para o estado em que estavam em um commit específico 
 identificado pelo id-do-commit, sem alterar o histórico de commits.
 
+git cherry-pick nome-da-branch: 
+Aplica o commit ou commits da branch especificada para o branch atual. 
+O comando é usado para integrar alterações específicas de outra branch sem mesclar toda a branch.
+Sintaxe: git cherry-pick nome-do-commit
 
+git blame nome-do-arquivo:
+Exibe informações sobre quem modificou cada linha de um arquivo, 
+mostrando o commit e o autor responsável pela última alteração em cada linha. 
+O comando é útil para rastrear mudanças e entender a história das edições em um arquivo específico.
+Sintaxe: git blame nome-do-arquivo
 
 *************************************************************************************************************************************
 *************************************************************************************************************************************
@@ -240,6 +279,7 @@ git tag -v nome-da-tag:
 Verifica e exibe a anotação associada à tag especificada. 
 Isso mostra a mensagem de anotação e outras informações sobre a tag, se ela for uma tag anotada.
 Sintaxe: git tag -v nome-da-tag
+
 
 
 *************************************************************************************************************************************
