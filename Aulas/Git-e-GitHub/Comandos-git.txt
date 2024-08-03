@@ -173,6 +173,75 @@ enquanto git stash pop aplica o stash ao diretório de trabalho e o remove, git 
 Por exemplo, git stash drop remove o último item adicionado ao stash, enquanto git stash drop 1 remove o item com índice 1.
 Sintaxe: git stash drop <índice>
 
+git restore . :
+Restaura todos os arquivos da área de trabalho para o último commit. 
+Em outras palavras, desfaz todas as mudanças não confirmadas (não staged) nos arquivos no diretório atual e subdiretórios.
+
+git checkout -- . :
+Semelhante ao git restore ., este comando também desfaz todas as mudanças não 
+confirmadas em todos os arquivos no diretório atual e subdiretórios. 
+Note que git checkout tem outros usos e, em versões mais recentes do Git,
+git restore é preferido para restaurar arquivos.
+
+git restore nome-do-arquivo:
+Restaura um arquivo específico para o estado em que estava no último commit, 
+desfazendo todas as mudanças não confirmadas (não staged) feitas nesse arquivo.
+Ambos git restore e git checkout são usados para desfazer alterações, mas git restore 
+foi introduzido para fornecer uma interface mais clara para esse propósito específico.
+
+git restore --staged nome-do-arquivo:
+Remove um arquivo específico da área de preparação, 
+desfazendo a sua inclusão no próximo commit, 
+mas mantendo as mudanças no arquivo na área de trabalho.
+
+git restore --source=id-do-commit:
+Restaura arquivos para o estado em que estavam em um commit específico 
+identificado pelo id-do-commit, sem alterar o histórico de commits.
+
+
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+****                                                                                                                             ****
+****                                                        CRIANDO TAG                                                          ****             
+****                                                                                                                             ****
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+git tag:
+Este comando cria uma nova tag com o nome especificado no repositório. 
+Tags são frequentemente usadas para marcar pontos específicos na história do commit, 
+como versões de lançamento.
+Sintaxe: git tag nome-da-tag
+
+git tag:
+Este comando lista todas as tags existentes no repositório. Ele mostra os nomes das tags 
+que foram criadas.
+Sintaxe: git tag
+
+git push origin --tags:
+Este comando envia todas as tags locais para o repositório remoto (especificado por origin). 
+Ele é usado para garantir que as tags criadas localmente sejam refletidas no repositório 
+remoto.
+Sintaxe: git push origin --tags
+
+git tag -d nome-da-:
+Remove uma tag local do repositório. 
+Isso exclui a tag especificada da lista de tags disponíveis localmente.
+Sintaxe: git tag -d nome-da-tag
+
+git tag -a nome-da-tag -m "" :
+Cria uma tag anotada com o nome especificado e adiciona uma mensagem de anotação. 
+As tags anotadas são armazenadas no repositório e incluem informações adicionais como a 
+data, o nome do autor e a mensagem de anotação.
+Sintaxe: git tag -a nome-da-tag -m "Comentario sobre a tag"
+
+git tag -v nome-da-tag:
+Verifica e exibe a anotação associada à tag especificada. 
+Isso mostra a mensagem de anotação e outras informações sobre a tag, se ela for uma tag anotada.
+Sintaxe: git tag -v nome-da-tag
+
+
 *************************************************************************************************************************************
 *************************************************************************************************************************************
 ****                                                                                                                             ****
@@ -191,5 +260,3 @@ https://www.toptal.com/developers/gitignore/
 GitHub Gist
 Compartilhe trechos específicos de código ou notas de forma rápida e fácil.
 URL: https://gist.github.com
-
-
